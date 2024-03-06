@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+// Declare a function called temperature that returns a float 
+
+float temperature(float fahrenheit);
+
+int main()
+{
+    //ask user for input
+    printf("Fahrenheit is: ");
+
+    //declare variable that holds user input
+    float f_value;
+    
+    //scan the input and save to the address 
+    scanf("%f", &f_value);
+    
+    //call function temperature
+    float result = temperature(f_value);
+
+    printf("Celsius is: %.2f\n", result);
+    
+    return 0;
+   }
+
+float temperature(float fahrenheit)
+
+{
+    //function returns the value of celsius 
+   return (5.0 / 9.0)*(fahrenheit - 32.0);
+}
