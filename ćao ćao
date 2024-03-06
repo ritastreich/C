@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+//declare variables for input
+    char answer[30];
+    char answerlast[30];
+
+//first input
+    printf("what is your name? ");
+      fgets(answer, sizeof(answer), stdin);
+//removes new line  
+    answer[strcspn(answer, "\n")] = '\0';
+
+//second input
+    printf("what is your last name? ");
+        fgets(answerlast, sizeof(answerlast), stdin);
+    
+//prints both    
+    printf("Hello, %s %s!", answer, answerlast);
+
+}
